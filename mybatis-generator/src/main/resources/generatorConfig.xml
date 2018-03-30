@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <context id="project" targetRuntime="MyBatis3">
+    <commentGenerator>
+        <property name="suppressDate" value="true"/>
+        <property name="suppressAllComments" value="true" />
+    </commentGenerator>
+    <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+                    connectionURL="jdbc:oracle:thin:@172.19.60.158:1521:orcl" userId="LM_PAY" password="123456">
+    </jdbcConnection>
+
+     <javaModelGenerator targetPackage="mybatis" targetProject="src/main/resources">
+    </javaModelGenerator>
+
+    <sqlMapGenerator targetPackage="mybatis/mapper" targetProject="src/main/resources">
+    </sqlMapGenerator>
+
+     <javaClientGenerator type="XMLMAPPER" targetPackage="mybatis" targetProject="src/main/resources">
+    </javaClientGenerator>
+
+    <!--<table schema="LM_PAY" tableName="T_BATCH_AUTH_RESULT" domainObjectName="BatchAuthResultEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="select * from dual" identity="false"/>
+      <columnOverride column="ID" javaType="java.lang.Long"/>
+      <columnOverride column="BATCH_AUTH_ID" javaType="java.lang.Long"/>
+      <columnOverride column="LINE_NO" javaType="java.lang.Long"/>
+      <columnOverride column="CREATE_TIME" javaType="java.util.Date"/>
+      <columnOverride column="UPDATE_TIME" javaType="java.util.Date"/>
+    </table>
+
+    <table schema="LM_PAY" tableName="T_BATCH_AUTH_TASK" domainObjectName="BatchAuthTaskEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="select * from dual" identity="false"/>
+      <columnOverride column="ID" javaType="java.lang.Long"/>
+      <columnOverride column="CREATE_TIME" javaType="java.util.Date"/>
+      <columnOverride column="UPDATE_TIME" javaType="java.util.Date"/>
+    </table>
+
+    <table schema="LM_PAY" tableName="T_ID_AUTH_POOL" domainObjectName="IdAuthPoolEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="select * from dual" identity="false"/>
+      <columnOverride column="ID" javaType="java.lang.Long"/>
+      <columnOverride column="CREATE_TIME" javaType="java.util.Date"/>
+    </table>-->
+
+
+    <table schema="LM_PAY" tableName="T_PAYMENT_CHANNEL_CONFIG" domainObjectName="PaymentChannelConfigEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="select * from dual" identity="false"/>
+      <columnOverride column="ID" javaType="java.lang.Long"/>
+      <columnOverride column="CREATE_TIME" javaType="java.util.Date"/>
+    </table>
+
+    <table schema="LM_PAY" tableName="T_PAYMENT_CHANNEL_PARAM" domainObjectName="PaymentChannelParamEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="select * from dual" identity="false"/>
+      <columnOverride column="ID" javaType="java.lang.Long"/>
+      <columnOverride column="PAY_COMPANY_ID" javaType="java.lang.Long"/>
+      <columnOverride column="CREATE_TIME" javaType="java.util.Date"/>
+      <columnOverride column="UPDATE_TIME" javaType="java.util.Date"/>
+    </table>
+
+    <table schema="LM_PAY" tableName="T_PAYMENT_CHECK_ACCOUNT" domainObjectName="PaymentCheckAccountEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="select * from dual" identity="false"/>
+      <columnOverride column="ID" javaType="java.lang.Long"/>
+      <columnOverride column="PAY_COMPANY_ID" javaType="java.lang.Long"/>
+      <columnOverride column="CREATE_TIME" javaType="java.util.Date"/>
+      <columnOverride column="SETTLE_DATE" javaType="java.util.Date"/>
+      <columnOverride column="MODIFY_TIME" javaType="java.util.Date"/>
+    </table>
+
+    <table schema="LM_PAY" tableName="T_PAYMENT_CONFIG" domainObjectName="PaymentConfigEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="select * from dual" identity="false"/>
+      <columnOverride column="ID" javaType="java.lang.Long"/>
+      <columnOverride column="PAY_COMPANY_ID" javaType="java.lang.Long"/>
+      <columnOverride column="CREATE_TIME" javaType="java.util.Date"/>
+      <columnOverride column="MODIFY_TIME" javaType="java.util.Date"/>
+    </table>
+  </context>
+
+
+  <context id="projectDB2" targetRuntime="MyBatis3">
+    <commentGenerator>
+      <property name="suppressDate" value="true"/>
+      <property name="suppressAllComments" value="true" />
+    </commentGenerator>
+    <jdbcConnection driverClass="com.ibm.db2.jcc.DB2Driver"
+                    connectionURL="jdbc:db2://172.19.60.48:50000/qa" userId="qa" password="123456">
+    </jdbcConnection>
+
+    <javaModelGenerator targetPackage="db2" targetProject="src/main/resources">
+    </javaModelGenerator>
+
+    <sqlMapGenerator targetPackage="db2/mapper" targetProject="src/main/resources">
+    </sqlMapGenerator>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="db2" targetProject="src/main/resources">
+    </javaClientGenerator>
+
+    <!--<table schema="LM_PAY" tableName="T_BATCH_AUTH_RESULT" domainObjectName="BatchAuthResultEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="select * from dual" identity="false"/>
+      <columnOverride column="ID" javaType="java.lang.Long"/>
+      <columnOverride column="BATCH_AUTH_ID" javaType="java.lang.Long"/>
+      <columnOverride column="LINE_NO" javaType="java.lang.Long"/>
+      <columnOverride column="CREATE_TIME" javaType="java.util.Date"/>
+      <columnOverride column="UPDATE_TIME" javaType="java.util.Date"/>
+    </table>
+
+    <table schema="LM_PAY" tableName="T_BATCH_AUTH_TASK" domainObjectName="BatchAuthTaskEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="select * from dual" identity="false"/>
+      <columnOverride column="ID" javaType="java.lang.Long"/>
+      <columnOverride column="CREATE_TIME" javaType="java.util.Date"/>
+      <columnOverride column="UPDATE_TIME" javaType="java.util.Date"/>
+    </table>
+
+    <table schema="LM_PAY" tableName="T_ID_AUTH_POOL" domainObjectName="IdAuthPoolEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="select * from dual" identity="false"/>
+      <columnOverride column="ID" javaType="java.lang.Long"/>
+      <columnOverride column="CREATE_TIME" javaType="java.util.Date"/>
+    </table>-->
+
+
+    <table schema="LM_PAY" tableName="T_PAYMENT_CHANNEL_CONFIG" domainObjectName="PaymentChannelConfigEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="select * from dual" identity="false"/>
+      <columnOverride column="ID" javaType="java.lang.Long"/>
+      <columnOverride column="CREATE_TIME" javaType="java.util.Date"/>
+    </table>
+
+    <table schema="LM_PAY" tableName="T_PAYMENT_CHANNEL_PARAM" domainObjectName="PaymentChannelParamEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="select * from dual" identity="false"/>
+      <columnOverride column="ID" javaType="java.lang.Long"/>
+      <columnOverride column="PAY_COMPANY_ID" javaType="java.lang.Long"/>
+      <columnOverride column="CREATE_TIME" javaType="java.util.Date"/>
+      <columnOverride column="UPDATE_TIME" javaType="java.util.Date"/>
+    </table>
+
+    <table schema="LM_PAY" tableName="T_PAYMENT_CHECK_ACCOUNT" domainObjectName="PaymentCheckAccountEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="select * from dual" identity="false"/>
+      <columnOverride column="ID" javaType="java.lang.Long"/>
+      <columnOverride column="PAY_COMPANY_ID" javaType="java.lang.Long"/>
+      <columnOverride column="CREATE_TIME" javaType="java.util.Date"/>
+      <columnOverride column="SETTLE_DATE" javaType="java.util.Date"/>
+      <columnOverride column="MODIFY_TIME" javaType="java.util.Date"/>
+    </table>
+
+    <table schema="LM_PAY" tableName="T_PAYMENT_CONFIG" domainObjectName="PaymentConfigEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="select * from dual" identity="false"/>
+      <columnOverride column="ID" javaType="java.lang.Long"/>
+      <columnOverride column="PAY_COMPANY_ID" javaType="java.lang.Long"/>
+      <columnOverride column="CREATE_TIME" javaType="java.util.Date"/>
+      <columnOverride column="MODIFY_TIME" javaType="java.util.Date"/>
+    </table>
+  </context>
+</generatorConfiguration>

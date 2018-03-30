@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+  <context id="project" targetRuntime="MyBatis3">
+    <!-- 实现自定义的代码生成器plugin -->
+    <plugin type="com.footprint.mybatis.generator.CurdPlugin" />
+    <commentGenerator>
+        <property name="suppressDate" value="true"/>
+        <property name="suppressAllComments" value="true" />
+    </commentGenerator>
+    <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+                    connectionURL="jdbc:oracle:thin:@172.19.60.158:1521:orcl" userId="LMLY_EC" password="123456">
+    </jdbcConnection>
+
+     <javaModelGenerator targetPackage="mybatis" targetProject="D:\worksoft\IntelliJIDEA\workspace\footprint-zh\mybatis-study\mybatis-generator\src\main\resources">
+    </javaModelGenerator>
+
+    <sqlMapGenerator targetPackage="mybatis/mapper" targetProject="D:\worksoft\IntelliJIDEA\workspace\footprint-zh\mybatis-study\mybatis-generator\src\main\resources">
+    </sqlMapGenerator>
+
+     <javaClientGenerator type="XMLMAPPER" targetPackage="mybatis" targetProject="D:\worksoft\IntelliJIDEA\workspace\footprint-zh\mybatis-study\mybatis-generator\src\main\resources">
+    </javaClientGenerator>
+
+    <!--<table schema="LMLY_EC" tableName="T_BDI_PAY_COMPANY_DAILY" domainObjectName="BdiPayCompanyEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="JDBC" identity="true"/>
+      <columnOverride column="ID" javaType="java.lang.Long" jdbcType="NUMERIC"/>
+      <columnOverride column="VERSION" javaType="java.lang.Long" jdbcType="NUMERIC"/>
+      <columnOverride column="TODAY_RECHARGE" javaType="java.math.BigDecimal" jdbcType="NUMERIC"/>
+      <columnOverride column="DAILY_DATE" javaType="java.util.Date"  jdbcType="DATE"/>
+    </table>
+
+    <table schema="LMLY_EC" tableName="T_AUTH_RECORD" domainObjectName="AuthRecordEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="JDBC" identity="true"/>
+      <columnOverride column="ID" javaType="java.lang.Long" jdbcType="NUMERIC"/>
+      <columnOverride column="VERSION" javaType="java.lang.Long" jdbcType="NUMERIC"/>
+    </table>
+-->
+    <!--<table schema="LMLY_EC" tableName="T_PAYMENT_ORDER" domainObjectName="PaymentOrderEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="JDBC" identity="true"/>
+      <columnOverride column="ID" javaType="java.lang.Long" jdbcType="NUMERIC"/>
+      <columnOverride column="VERSION" javaType="java.lang.Long" jdbcType="NUMERIC"/>
+      <columnOverride column="PAY_TIME_CONSUMING" jdbcType="NUMERIC"/>
+      <columnOverride column="PAY_AMOUNT" jdbcType="NUMERIC"/>
+      <columnOverride column="REFUND_AMOUNT" jdbcType="NUMERIC"/>
+      <columnOverride column="ENTER_AMOUNT" jdbcType="NUMERIC"/>
+      <columnOverride column="FEE" jdbcType="NUMERIC"/>
+      <columnOverride column="INCOME_AMOUNT" jdbcType="NUMERIC"/>
+      <columnOverride column="PLATFORM_COMMISSION" jdbcType="NUMERIC"/>
+      <columnOverride column="MERCHANT_PRO_RATE" jdbcType="NUMERIC"/>
+      <columnOverride column="PAY_CHANNEL_RATE" jdbcType="NUMERIC"/>
+    </table>-->
+
+    <table schema="LMLY_EC" tableName="T_PAYMENT_REFUND" domainObjectName="PaymentRefundEntity"
+           enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+           enableUpdateByExample="false">
+      <generatedKey column="ID" sqlStatement="JDBC" identity="true"/>
+      <columnOverride column="ID" javaType="java.lang.Long" jdbcType="NUMERIC"/>
+      <columnOverride column="VERSION" javaType="java.lang.Long" jdbcType="NUMERIC"/>
+      <columnOverride column="PRI_AMOUNT" jdbcType="NUMERIC"/>
+      <columnOverride column="REFUND_AMOUNT" jdbcType="NUMERIC"/>
+      <columnOverride column="OUT_AMOUNT" jdbcType="NUMERIC"/>
+      <columnOverride column="RETREAT_INCOME_AMOUNT" jdbcType="NUMERIC"/>
+      <columnOverride column="RETREAT_FEE" jdbcType="NUMERIC"/>
+      <columnOverride column="RETREAT_PLATFORM_COMMISSION" jdbcType="NUMERIC"/>
+      <columnOverride column="RETREAT_CHANNEL_FEE" jdbcType="NUMERIC"/>
+      <columnOverride column="TIME_CONSUMING" jdbcType="NUMERIC"/>
+    </table>
+
+  </context>
+</generatorConfiguration>
